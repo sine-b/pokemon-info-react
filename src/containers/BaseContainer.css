@@ -1,0 +1,16 @@
+.layout-container {
+  height: 100%;
+}
+
+.layout-content-page-container {
+  padding: 5px 24px 24px;
+}
+
+.content-container {
+  background: #ffffff;
+  padding-top: 24px;
+}
+
+.breadcrumb-container {
+  margin: 16px 0 !important;
+}
