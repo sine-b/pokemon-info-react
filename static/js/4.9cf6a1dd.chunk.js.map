@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/home/Home.tsx"],"names":["Home"],"mappings":"uJAMeA,UAJ2B,WACxC,OAAO","file":"static/js/4.9cf6a1dd.chunk.js","sourcesContent":["import React from 'react';\n\nconst Home: React.FunctionComponent<{}> = () => {\n  return <div>Home</div>;\n};\n\nexport default Home;\n"],"sourceRoot":""}
