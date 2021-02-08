@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Layout, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 
 import Router from '../router/Router';
 import { routes } from '../router/config';
@@ -13,17 +13,17 @@ const { Content, Sider } = Layout;
 
 export default function BaseContainer() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Layout className="layout-container">
         <Sider width={200}>
           <MenuPanel />
         </Sider>
         <Layout className="layout-content-page-container">
-          <Breadcrumb className="breadcrumb-container">
+          {/* <Breadcrumb className="breadcrumb-container">
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
+          </Breadcrumb> */}
           <Content className="content-container">
             <Router routes={routes}></Router>
           </Content>

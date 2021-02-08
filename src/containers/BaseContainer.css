@@ -9,6 +9,7 @@
 .content-container {
   background: #ffffff;
   padding-top: 24px;
+  overflow-y: auto;
 }
 
 .breadcrumb-container {

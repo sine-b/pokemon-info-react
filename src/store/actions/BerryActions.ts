@@ -17,14 +17,15 @@ export interface IBerryGetAction {
 
 export const getBerries: ActionCreator<
   ThunkAction<Promise<any>, IBerryListState, null, IBerryListGetAction>
-> = () => {
+> = (limit = '', offset = '') => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await api.get('/berry/');
+      const response = await api.get(`/berry/?limit=${limit}&offset=${offset}`);
       dispatch({
-        resource: response.data,
+        berryList: response.data,
         type: GET_BERRYLIST,
       });
+      return response;
     } catch (error) {
       console.error(error);
     }
