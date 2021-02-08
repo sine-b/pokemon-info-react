@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/berries/Berries.tsx"],"names":["Berries"],"mappings":"uJAMeA,UAJ8B,WAC3C,OAAO","file":"static/js/0.5ca8f8b1.chunk.js","sourcesContent":["import React from 'react';\n\nconst Berries: React.FunctionComponent<{}> = () => {\n  return <div>Berries</div>;\n};\n\nexport default Berries;\n"],"sourceRoot":""}

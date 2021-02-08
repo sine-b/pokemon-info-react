@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/pages/items/Items.tsx"],"names":["Items"],"mappings":"wJAMeA,UAJ4B,WACzC,OAAO","file":"static/js/12.4300a9d0.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Items: React.FunctionComponent<{}> = () => {\r\n  return <div>Items</div>;\r\n};\r\n\r\nexport default Items;\r\n"],"sourceRoot":""}
