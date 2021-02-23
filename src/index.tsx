@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import { Store } from 'redux';
 import { Provider } from 'react-redux';
@@ -18,7 +19,13 @@ const store = configureStore();
 const Root: React.FunctionComponent<IProps> = (props) => {
   return (
     <Provider store={props.store}>
-      <App />
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <App />
+      </BrowserRouter>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      />
     </Provider>
   );
 };

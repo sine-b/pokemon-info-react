@@ -6,6 +6,9 @@
 }
 
 .bounce {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-name: bounce;

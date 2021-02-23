@@ -1,2 +1,3 @@
 export const GET_BERRYLIST = 'GET_BERRYLIST';
+export const GET_BERRYLIST_WITH_DATA = 'GET_BERRYLIST_WITH_DATA';
 export const GET_BERRY = 'GET_BERRY';

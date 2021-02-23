@@ -1,9 +1,21 @@
 import { Reducer } from 'redux';
-import { IBerryListGetAction, IBerryGetAction } from '../actions/BerryActions';
-import { GET_BERRYLIST, GET_BERRY } from '../actions/actionTypes';
+import {
+  IBerryListGetAction,
+  IBerryGetAction,
+  IBerryListWithDataGetAction,
+} from '../actions/BerryActions';
+import {
+  GET_BERRYLIST,
+  GET_BERRYLIST_WITH_DATA,
+  GET_BERRY,
+} from '../actions/actionTypes';
 
 export interface IBerryListState {
   readonly berryList: IResourceList;
+}
+
+export interface IBerryListWithDataState {
+  readonly berryList: IBerry[];
 }
 
 export interface IBerryState {
@@ -17,6 +29,9 @@ const initialBerryListState = {
     previous: false,
   },
 };
+const initialBerryListWithDataState = {
+  berryList: [{ id: 0, name: '' }],
+};
 const initialBerryState = { berry: { id: 0, name: '' } };
 
 export const berryListReducer: Reducer<IBerryListState, IBerryListGetAction> = (
@@ -25,6 +40,22 @@ export const berryListReducer: Reducer<IBerryListState, IBerryListGetAction> = (
 ) => {
   switch (action.type) {
     case GET_BERRYLIST: {
+      return {
+        ...state,
+        berryList: action.berryList,
+      };
+    }
+    default:
+      return state;
+  }
+};
+
+export const berryListWithDataReducer: Reducer<
+  IBerryListWithDataState,
+  IBerryListWithDataGetAction
+> = (state = initialBerryListWithDataState, action) => {
+  switch (action.type) {
+    case GET_BERRYLIST_WITH_DATA: {
       return {
         ...state,
         berryList: action.berryList,

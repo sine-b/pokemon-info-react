@@ -1,40 +1,50 @@
 import React from 'react';
-import { Link, matchPath, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Tooltip,
+} from '@material-ui/core';
+
 import { routes } from '../../router/config';
-import { Menu } from 'antd';
 
 import './MenuPanel.css';
 
-const MenuLinks = routes.map((route) => {
-  return (
-    <Menu.Item key={route.path} icon={route.icon}>
-      <Link to={route.path}>
-        <span>{route.name}</span>
-      </Link>
-    </Menu.Item>
-  );
-});
+interface MenuPanelProps {
+  mini?: Boolean;
+  onItemSelected: () => void;
+}
 
-const MenuPanel: React.FunctionComponent<{}> = () => {
+const MenuPanel: React.FunctionComponent<MenuPanelProps> = (props) => {
   const location = useLocation();
-  const matchKey = (location: any) => {
-    const matchedRoute = routes.find((route) =>
-      matchPath(location.pathname, route)
-    );
-    if (matchedRoute) return matchedRoute.path;
-    else return '/';
+  const activeRoute = (pathName: string) => {
+    return location.pathname === pathName;
   };
 
-  return (
-    <Menu
-      mode="inline"
-      className="menu-container"
-      defaultSelectedKeys={['/']}
-      selectedKeys={[matchKey(location)]}
-    >
-      {MenuLinks}
-    </Menu>
-  );
+  const MenuLinks = routes.map((route) => {
+    return (
+      <ListItem
+        button
+        key={route.path}
+        component={Link}
+        to={route.path}
+        selected={activeRoute(route.path)}
+        onClick={props.onItemSelected}
+      >
+        {route.icon ? (
+          <Tooltip title={props.mini ? route.name : ''} placement="right-start">
+            <ListItemIcon>{route.icon}</ListItemIcon>
+          </Tooltip>
+        ) : null}
+
+        <ListItemText>{route.name}</ListItemText>
+      </ListItem>
+    );
+  });
+
+  return <List>{MenuLinks}</List>;
 };
 
 export default MenuPanel;

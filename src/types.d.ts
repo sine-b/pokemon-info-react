@@ -16,7 +16,7 @@ interface IAPIResource {
 }
 
 interface IBerry extends IPokeObject {
-  growth_type?: number;
+  growth_time?: number;
   max_harvest?: number;
   natural_gift_power?: number;
   size?: number;

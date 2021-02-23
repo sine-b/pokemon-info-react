@@ -1,5 +1,16 @@
-import { HomeOutlined, PlaySquareOutlined } from '@ant-design/icons';
-import { BerryIcon } from '../components/icon-components/Icons';
+import {
+  Home,
+  VideogameAsset,
+  EmojiEvents,
+  SportsMma,
+  TrackChanges,
+  ViewDay,
+  Explore,
+  Album,
+  SportsKabaddi,
+  BugReport,
+} from '@material-ui/icons';
+import BerryIcon from '../components/icon-components/Icons';
 import { LazyExoticComponent, lazy, ComponentType, ReactNode } from 'react';
 
 export interface IRoute {
@@ -22,7 +33,7 @@ export const routes: IRoute[] = [
     exact: true,
     name: 'Home',
     fallback: defaultFallback,
-    icon: <HomeOutlined />,
+    icon: <Home />,
     component: lazy(() => import('../components/pages/home/Home')),
   },
   {
@@ -38,7 +49,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Contests',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <EmojiEvents />,
     component: lazy(() => import('../components/pages/contests/Contests')),
   },
   {
@@ -46,7 +57,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Encounters',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <SportsMma />,
     component: lazy(() => import('../components/pages/encounters/Encounters')),
   },
   {
@@ -54,7 +65,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Evolutions',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <TrackChanges />,
     component: lazy(() => import('../components/pages/evolutions/Evolutions')),
   },
   {
@@ -62,7 +73,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Games',
     fallback: defaultFallback,
-    icon: <PlaySquareOutlined />,
+    icon: <VideogameAsset />,
     component: lazy(() => import('../components/pages/games/Games')),
   },
   {
@@ -70,7 +81,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Items',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <ViewDay />,
     component: lazy(() => import('../components/pages/items/Items')),
   },
   {
@@ -78,7 +89,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Locations',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <Explore />,
     component: lazy(() => import('../components/pages/locations/Locations')),
   },
   {
@@ -86,7 +97,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Machines',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <Album />,
     component: lazy(() => import('../components/pages/machines/Machines')),
   },
   {
@@ -94,7 +105,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Moves',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <SportsKabaddi />,
     component: lazy(() => import('../components/pages/moves/Moves')),
   },
   {
@@ -102,7 +113,7 @@ export const routes: IRoute[] = [
     exact: false,
     name: 'Pokémon',
     fallback: defaultFallback,
-    // icon: <BerryIcon />,
+    icon: <BugReport />,
     component: lazy(() => import('../components/pages/pokemon/Pokemon')),
   },
 ];

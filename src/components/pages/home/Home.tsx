@@ -1,55 +1,68 @@
-import React, { useRef, useState } from 'react';
-import { useResizeDetector } from 'react-resize-detector';
-import { Card, Image, Space, Typography } from 'antd';
-import { ArrowLeftOutlined } from '@ant-design/icons';
+import React, { useRef } from 'react';
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import logoPng from '../../../assets/logo.png';
+import { makeStyles } from '@material-ui/core/styles';
 import './Home.css';
 
-const { Title, Paragraph, Text } = Typography;
+const useStyles = makeStyles((theme) => {
+  return {
+    logo: {
+      [theme.breakpoints.up('md')]: {
+        width: 500,
+      },
+      width: 250,
+    },
+    textContainer: {
+      backgroundColor: '#F5F5F5',
+      padding: 10,
+    },
+    textCard: {
+      margin: 10,
+    },
+    movingText: {
+      color: 'green',
+    },
+  };
+});
 
 const Home: React.FunctionComponent<{}> = () => {
   const homeRef = useRef<HTMLDivElement>(null);
-  const { width } = useResizeDetector({ targetRef: homeRef });
+  const classes = useStyles();
 
-  const aboutText =
-    'This is a basic React app meant to demonstrate the use of ' +
-    'typed data management using TypeScript and Redux. ' +
-    'Custom routes are organized in a dedicated config file for ' +
-    'ease of maintenance. All data is pulled using the PokeAPI ' +
-    'and the UI laid out using Ant Design.';
+  const aboutText = `This is a basic React app meant to demonstrate the use of 
+    typed data management using TypeScript and Redux. 
+    Custom routes are organized in a dedicated config file for 
+    ease of maintenance. All data is pulled using the PokeAPI 
+    and the UI laid out using Material UI Design.`;
 
   const howToUseText = 'Navigate using the menu items on the left side.';
 
   return (
     <div ref={homeRef}>
-      <Space direction="vertical" size="small" style={{ width: '100%' }}>
-        <div ref={homeRef} className="logo-container">
-          <Image
-            width={width && (width > 530 ? 500 : 250)}
-            src={logoPng}
-            preview={false}
-          />
-          <Title level={2}>Information App</Title>
-        </div>
-        <div className="layout-content-page-container">
-          <Card title="About">
-            <Paragraph>{aboutText}</Paragraph>
-          </Card>
-        </div>
-        <div className="layout-content-page-container">
-          <Card title="How to Use">
-            <Paragraph>{howToUseText}</Paragraph>
+      <div ref={homeRef} className="logo-container">
+        <CardMedia component="img" image={logoPng} className={classes.logo} />
+        <Typography variant="h2">Information App</Typography>
+      </div>
+      <div className={classes.textContainer}>
+        <Card className={classes.textCard}>
+          <CardContent>
+            <Typography>{aboutText}</Typography>
+          </CardContent>
+        </Card>
+        <Card className={classes.textCard}>
+          <CardContent>
+            <Typography>{howToUseText}</Typography>
             <div className="bounce">
-              <ArrowLeftOutlined />
-              <Text type="success" strong>
-                {' '}
+              <ArrowBackIcon />
+              <Typography variant="subtitle2" className={classes.movingText}>
                 Explore!
-              </Text>
+              </Typography>
             </div>
-          </Card>
-        </div>
-      </Space>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };
