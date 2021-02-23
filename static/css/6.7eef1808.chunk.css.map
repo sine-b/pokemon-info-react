@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/pages/berries/Berries.css"],"names":[],"mappings":"AAAA,iBACE,YAAa,CACb,qBAAsB,CACtB,WACF","file":"6.7eef1808.chunk.css","sourcesContent":[".berry-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  height: 100%;\r\n}\r\n"]}

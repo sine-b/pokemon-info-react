@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/pages/pokemon/Pokemon.tsx"],"names":["Pokemon"],"mappings":"wJAMeA,UAJ8B,WAC3C,OAAO","file":"static/js/14.17b53703.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Pokemon: React.FunctionComponent<{}> = () => {\r\n  return <div>Pokemon</div>;\r\n};\r\n\r\nexport default Pokemon;\r\n"],"sourceRoot":""}

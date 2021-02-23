@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/pages/games/Games.tsx"],"names":["Games"],"mappings":"wJAMeA,UAJ4B,WACzC,OAAO","file":"static/js/11.f4dfe443.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Games: React.FunctionComponent<{}> = () => {\r\n  return <div>Games</div>;\r\n};\r\n\r\nexport default Games;\r\n"],"sourceRoot":""}

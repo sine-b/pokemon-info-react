@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/pages/moves/Moves.tsx"],"names":["Moves"],"mappings":"wJAMeA,UAJ4B,WACzC,OAAO","file":"static/js/13.62f380d1.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Moves: React.FunctionComponent<{}> = () => {\r\n  return <div>Moves</div>;\r\n};\r\n\r\nexport default Moves;\r\n"],"sourceRoot":""}

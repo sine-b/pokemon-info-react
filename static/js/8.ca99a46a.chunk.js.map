@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/pages/evolutions/Evolutions.tsx"],"names":["Evolutions"],"mappings":"uJAMeA,UAJiC,WAC9C,OAAO","file":"static/js/8.ca99a46a.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Evolutions: React.FunctionComponent<{}> = () => {\r\n  return <div>Evolutions</div>;\r\n};\r\n\r\nexport default Evolutions;\r\n"],"sourceRoot":""}

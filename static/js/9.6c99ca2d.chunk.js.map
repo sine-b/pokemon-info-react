@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/pages/encounters/Encounters.tsx"],"names":["Encounters"],"mappings":"uJAMeA,UAJiC,WAC9C,OAAO","file":"static/js/9.6c99ca2d.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Encounters: React.FunctionComponent<{}> = () => {\r\n  return <div>Encounters</div>;\r\n};\r\n\r\nexport default Encounters;\r\n"],"sourceRoot":""}

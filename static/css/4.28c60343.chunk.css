@@ -1,0 +1,2 @@
+.logo-container{flex-direction:column;justify-content:center}.bounce,.logo-container{display:flex;align-items:center}.bounce{padding-top:5px;animation-duration:3s;animation-iteration-count:infinite;animation-name:bounce;animation-timing-function:ease}@keyframes bounce{0%{transform:translateX(0)}30%{transform:translateX(20px)}50%{transform:translateX(0)}to{transform:translateX(0)}}
+/*# sourceMappingURL=4.28c60343.chunk.css.map */
