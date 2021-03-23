@@ -1,8 +1,8 @@
 import { Reducer } from 'redux';
 import {
   IBerryListGetAction,
-  IBerryGetAction,
   IBerryListWithDataGetAction,
+  IBerryGetAction,
 } from '../actions/BerryActions';
 import {
   GET_BERRYLIST,
@@ -74,6 +74,7 @@ export const berryReducer: Reducer<IBerryState, IBerryGetAction> = (
     case GET_BERRY: {
       return {
         ...state,
+        berry: action.berry,
       };
     }
     default:

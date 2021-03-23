@@ -1,5 +1,7 @@
 .layout-container {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .layout-content-page-container {

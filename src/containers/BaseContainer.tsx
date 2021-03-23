@@ -63,9 +63,10 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up('md')]: {
         width: `calc(100% - ${drawerWidth}px)`,
         marginLeft: drawerWidth,
+        maxHeight: `calc(100% - ${theme.mixins.toolbar.minHeight}px)`,
       },
       maxHeight: '100%',
-      zIndex: theme.zIndex.drawer + 1,
+      flex: '1 0 auto',
     },
     drawer: {
       width: drawerWidth,
@@ -91,6 +92,9 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up('md')]: {
         width: theme.spacing(9) + 1,
       },
+    },
+    drawerPaper: {
+      zIndex: 1,
     },
   };
 });
@@ -152,7 +156,7 @@ export default function BaseContainer() {
               [classes.drawerClose]: !drawerOpen,
             })}
             classes={{
-              paper: clsx({
+              paper: clsx(classes.drawerPaper, {
                 [classes.drawerOpen]: drawerOpen,
                 [classes.drawerClose]: !drawerOpen,
               }),
@@ -174,7 +178,7 @@ export default function BaseContainer() {
             open
             className={classes.drawerOpen}
             classes={{
-              paper: classes.drawerOpen,
+              paper: clsx(classes.drawerPaper, classes.drawerOpen),
             }}
           >
             <MenuPanel onItemSelected={handleDrawerClose} />

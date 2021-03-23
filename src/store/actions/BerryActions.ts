@@ -58,8 +58,12 @@ export const getBerriesWithData: ActionCreator<
       const response = await api.get(`/berry/?limit=${limit}&offset=${offset}`);
       const responsePromises = response.data.results.map(
         async (berryResult: IAPIResource) => {
-          let berryData = await api.get(berryResult.url);
-          return berryData.data;
+          try {
+            let berryData = await api.get(berryResult.url);
+            return berryData.data;
+          } catch (error) {
+            console.error(error);
+          }
         }
       );
       const berryDataList = await Promise.all(responsePromises);
@@ -67,7 +71,6 @@ export const getBerriesWithData: ActionCreator<
         berryList: berryDataList,
         type: GET_BERRYLIST_WITH_DATA,
       });
-      console.log(berryDataList);
     } catch (error) {
       console.error(error);
     }
