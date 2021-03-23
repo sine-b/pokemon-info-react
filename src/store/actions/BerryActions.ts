@@ -66,7 +66,10 @@ export const getBerriesWithData: ActionCreator<
           }
         }
       );
-      const berryDataList = await Promise.all(responsePromises);
+      let berryDataList: IBerry[] = await Promise.all(responsePromises);
+      berryDataList = berryDataList.filter((berryObj) => {
+        return !!berryObj;
+      });
       dispatch({
         berryList: berryDataList,
         type: GET_BERRYLIST_WITH_DATA,

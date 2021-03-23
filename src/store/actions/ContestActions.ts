@@ -118,7 +118,12 @@ export const getContestTypesWithData: ActionCreator<
           }
         }
       );
-      const contestTypeDataList = await Promise.all(responsePromises);
+      let contestTypeDataList: IContestType[] = await Promise.all(
+        responsePromises
+      );
+      contestTypeDataList = contestTypeDataList.filter((contestTypeObj) => {
+        return !!contestTypeObj;
+      });
       dispatch({
         contestTypeList: contestTypeDataList,
         type: GET_CONTESTTYPELIST_WITH_DATA,
@@ -193,7 +198,14 @@ export const getContestEffectsWithData: ActionCreator<
           }
         }
       );
-      const contestEffectDataList = await Promise.all(responsePromises);
+      let contestEffectDataList: IContestEffect[] = await Promise.all(
+        responsePromises
+      );
+      contestEffectDataList = contestEffectDataList.filter(
+        (contestEffectObj) => {
+          return !!contestEffectObj;
+        }
+      );
       dispatch({
         contestEffectList: contestEffectDataList,
         type: GET_CONTESTEFFECTLIST_WITH_DATA,
@@ -270,11 +282,19 @@ export const getSuperContestEffectsWithData: ActionCreator<
           }
         }
       );
-      const superContestEffectDataList = await Promise.all(responsePromises);
+      let superContestEffectDataList: ISuperContestEffect[] = await Promise.all(
+        responsePromises
+      );
+      superContestEffectDataList = superContestEffectDataList.filter(
+        (superContestEffectObj) => {
+          return !!superContestEffectObj;
+        }
+      );
       dispatch({
         superContestEffectList: superContestEffectDataList,
         type: GET_SUPERCONTESTEFFECTLIST_WITH_DATA,
       });
+      console.log(superContestEffectDataList);
     } catch (error) {
       console.error(error);
     }
