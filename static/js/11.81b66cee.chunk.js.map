@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/pages/locations/Locations.tsx"],"names":["Locations"],"mappings":"wJAMeA,UAJgC,WAC7C,OAAO","file":"static/js/11.81b66cee.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Locations: React.FunctionComponent<{}> = () => {\r\n  return <div>Locations</div>;\r\n};\r\n\r\nexport default Locations;\r\n"],"sourceRoot":""}

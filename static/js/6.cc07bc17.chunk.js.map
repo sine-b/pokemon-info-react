@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/pages/contests/Contests.tsx"],"names":["Contests"],"mappings":"uJAMeA,UAJ+B,WAC5C,OAAO","file":"static/js/6.cc07bc17.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Contests: React.FunctionComponent<{}> = () => {\r\n  return <div>Contests</div>;\r\n};\r\n\r\nexport default Contests;\r\n"],"sourceRoot":""}

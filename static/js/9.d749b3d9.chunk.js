@@ -1,0 +1,2 @@
+(this["webpackJsonppokemon-info-react"]=this["webpackJsonppokemon-info-react"]||[]).push([[9],{273:function(e,n,t){"use strict";t.r(n);var o=t(2);t(0);n.default=function(){return Object(o.jsx)("div",{children:"Games"})}}}]);
+//# sourceMappingURL=9.d749b3d9.chunk.js.map

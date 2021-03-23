@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/pages/machines/Machines.tsx"],"names":["Machines"],"mappings":"wJAMeA,UAJ+B,WAC5C,OAAO","file":"static/js/12.f11715bb.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst Machines: React.FunctionComponent<{}> = () => {\r\n  return <div>Machines</div>;\r\n};\r\n\r\nexport default Machines;\r\n"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/pages/berries/Berries.scss"],"names":[],"mappings":"AAAA,iBACE,YAAA,CACA,qBAAA,CACA,WAAA,CACA,cAAA,CAEA,2CACE,WAAA","file":"5.6ecf6ea3.chunk.css","sourcesContent":[".berry-container {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  padding: 0px 15px;\n\n  .berry-datagrid-container {\n    flex-grow: 1;\n  }\n}\n"]}
